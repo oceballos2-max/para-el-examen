@@ -1,0 +1,80 @@
+========================================================================
+ GUÍA DE COMANDOS, EVENTOS Y ESTRUCTURAS DE CÓDIGO (REGISTRO DE PRODUCTOS)
+========================================================================
+
+1. DIRECTIVAS DE BLAZOR
+------------------------------------------------------------------------
+@rendermode InteractiveServer
+  -> Indica al servidor que el componente debe responder a eventos interactivos
+     en tiempo real desde el navegador (clics, escritura, etc.).
+
+@code { ... }
+  -> Bloque especial de Razor donde se declara la lógica del programa, las
+     variables, las listas y los métodos.
+
+@if (...) { ... }
+  -> Evalúa una condición booleana para mostrar u ocultar elementos HTML
+     en la interfaz.
+
+@for (...) { ... }
+  -> Ciclo de Razor para generar filas (<tr>) y celdas (<td>) de HTML
+     de manera repetitiva en la tabla.
+
+
+2. EVENTOS HTML / BLAZOR
+------------------------------------------------------------------------
+@oninput
+  -> Evento que se dispara instantáneamente cada vez que el usuario presiona
+     una tecla en una casilla de entrada (<input>).
+
+@onclick
+  -> Evento que ejecuta un método o función cuando el usuario hace clic
+     en un botón o casilla de verificación.
+
+ChangeEventArgs e
+  -> Parámetro especial de eventos que recibe la información del valor actual
+     capturado en el control de entrada.
+
+
+3. MÉTODOS Y FUNCIONES DE C# / BLAZOR
+------------------------------------------------------------------------
+int.TryParse(cadena, out variable)
+  -> Intenta convertir un texto en un número entero de forma segura. Si el texto
+     no es válido, asigna 0 sin que la aplicación falle.
+
+lista.Add(valor)
+  -> Inserta un nuevo elemento al final de una lista.
+
+lista.Count
+  -> Propiedad que devuelve la cantidad total de elementos almacenados en la lista.
+
+new List<tipo>()
+  -> Comando para instanciar o inicializar una lista vacía en memoria.
+
+
+4. ESTRUCTURAS DE CONTROL TRADICIONALES
+------------------------------------------------------------------------
+for (int i = 0; i < limite; i++)
+  -> Ciclo repetitivo que utiliza una variable de control 'i' comenzando en 0
+     para recorrer posición por posición las listas.
+
+if (condicion) { ... }
+  -> Estructura condicional que ejecuta el bloque de código solo si la afirmación
+     se cumple (true).
+
+break;
+  -> Detiene inmediatamente la ejecución de un ciclo (for o while) al encontrar
+     el valor buscado.
+
+
+5. MANEJO DE LISTAS PARALELAS (SIN OBJETOS)
+------------------------------------------------------------------------
+Concepto:
+  -> Consiste en guardar cada atributo del registro en una lista diferente pero
+     compartiendo la misma posición (índice 'i').
+  
+  Ejemplo de índice i = 0:
+    - listaInventarios[0]   -> guarda el número 101
+    - listaDescripciones[0] -> guarda "Manzana"
+    - listaDepartamentos[0] -> guarda "Frutas"
+========================================================================

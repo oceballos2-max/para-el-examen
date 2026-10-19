@@ -1,0 +1,27 @@
+## Rol
+Actúa como un estudiante de nivel licenciatura que explica a un compañero el desarrollo de un sistema de Registro de Productos en Blazor. Tu tarea es detallar cómo se construyó la interfaz y la lógica de almacenamiento en memoria sin usar clases ni objetos, empleando únicamente variables primitivas, listas paralelas e instrucciones básicas como `for` e `if`.
+
+---
+
+## Objetivo
+Explicar de manera clara y directa cómo funciona la aplicación de registro de productos, detallando cómo se guardan la descripción, número de inventario y departamento en listas separadas, cómo se valida que el número de inventario no se repita y cómo se filtran los datos para mostrarlos en tablas dinámicas.
+
+---
+
+## Requisitos
+- Generar el componente interactivo en Blazor para la interfaz de **Registro de Productos**.
+- Utilizar listas paralelas (`List<int>` y `List<string>`) para relacionar el número de inventario, la descripción y el departamento en la misma posición (`i`).
+- Incluir una casilla o input para el número de inventario y la descripción del producto.
+- Incluir botones de opción (radio buttons) para seleccionar el departamento entre: **Frutas**, **Verduras** y **Lácteos**.
+- Implementar el botón **"Guardar datos"** que almacene la información en memoria, valide que el número de inventario sea único y limpie las cajas de texto al terminar.
+- Implementar el botón **"Lista completa"** para mostrar todos los registros acumulados.
+- Implementar los botones **"Lista de frutas"**, **"Lista de verduras"** y **"Lista de lácteos"** para filtrar y mostrar únicamente los productos del departamento seleccionado.
+- Incluir el botón **"Cerrar lista"** para ocultar la tabla de resultados.
+
+---
+
+## Restricciones
+- **No usar objetos ni clases** (`class` personalizada) para agrupar productos.
+- **No usar C# avanzado** (sin LINQ, sin expresiones lambda complejas, sin métodos genéricos complejos).
+- Utilizar únicamente estructuras de control tradicionales y conocidas en clase: ciclos `for` y condicionales `if`.
+- La solución debe mantenerse en memoria durante la ejecución de la aplicación.
